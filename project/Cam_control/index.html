@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ASG 3</title>
+
+        <!-- Load external libs -->
+        <script src="lib/cuon-matrix-cse160.js"></script>
+        <script src="lib/cuon-utils.js"></script>
+        <script src="lib/webgl-debug.js"></script>
+        <script src="lib/webgl-utils.js"></script>
+
+        <!-- Load internal libs -->
+        <script src="camera.js"></script>
+        <script src="models/model.js"></script>
+        <script src="models/cube.js"></script>
+        <script src="models/sphere.js"></script>
+
+        <!-- Load main -->
+        <script src="asg3.js"></script>
+    </head>
+
+    <body onload="main()">
+        <canvas id="canvas" width="400" height="400"></canvas>
+
+        <br><br>
+        <select id="cubeSelect">
+            <option selected disabled>Empty</option>
+        </select>
+
+        <br><br>
+        <label>Rotation along y-axis</label>
+        <input id="rotSlider" type="range" min="-180" max="180" oninput="onRotationInput(this.value)"></input>
+
+
+        <br><br>
+        <p><label>Animation</label>
+        <input type="checkbox" name="anim" id="anim" checked ="anim"><p>
+
+
+        <br><br>
+        <label>Zoom Out:</label>
+        <input id="zoomSlider" value="1" type="range" min="1" max="20" oninput="onZoomInput(this.value)"></input>
+
+
+        <h3>======== inherit from Last assignment =============== </h3>
+        <p><label>Select Shading</label><p>
+        <input type="radio" name="Shading" id="frame_s" value ="1" ><label>Wireframe  </label>
+        <input type="radio" name="Shading" id="flat_s" value ="2"><label>Flat Shading </label>
+        <input type="radio" name="Shading" id="smooth_s" value ="3" checked><label>Smooth Shading </label>
+
+        <p><label>Select source</label><p>
+        <input type="radio" name="pl_on" id="pl_on_dl_on" value ="1" checked><label>Both ON </label>
+        <input type="radio" name="pl_on" id="pl_off_dl_on" value ="2"><label>Only directional light </label>
+        <input type="radio" name="pl_on" id="pl_on_dl_off" value ="3"><label>Only point light </label>
+        <input type="radio" name="pl_on" id="pl_off_dl_off" value ="4"><label>Both OFF </label><p>
+
+        <p><label>Point light position: </label><p>
+
+        <label>X_position &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Y_position &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Z_position</label><p>
+        <input id="lx" type="range" min="-3" max="1" step = "0.02"></input>
+        <input id="ly" type="range" min="-1" max="3" step = "0.02"></input>
+        <input id="lz" type="range" min="-1" max="3" step = "0.02" ></input>
+
+
+        <br><br>
+        <label>lighting effects options:</label><p>
+
+        <input type="checkbox" name="ambient" id="amb" checked ="amb">
+        <label>ambient light</label><p>
+        <input type="checkbox" name="diffuse" id="dif" checked ="dif">
+        <label>diffuse light</label><p>
+        <input type="checkbox" name="specular" id="spe" checked ="spe">
+        <label>specular light, specular light Factor(1-100):</label>
+        <input id="speFactor" type="number" value="32"></input><p>
+
+
+
+
+    </body>
+</html>

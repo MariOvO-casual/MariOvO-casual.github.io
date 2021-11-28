@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ASG 2</title>
+
+        <!-- Load external libs -->
+        <script src="lib/cuon-matrix-cse160.js"></script>
+        <script src="lib/cuon-utils.js"></script>
+        <script src="lib/webgl-debug.js"></script>
+        <script src="lib/webgl-utils.js"></script>
+
+        <!-- Load internal libs -->
+        <script src="cube.js"></script>
+
+        <!-- Load main -->
+        <script src="asg2.js"></script>
+    </head>
+
+    <body onload="main()">
+        <canvas id="canvas" width="400" height="400"></canvas>
+        <br><br>
+        
+
+        <br><br>
+        <select id="cubeSelect">
+            <option selected disabled>Empty</option>
+        </select>
+
+        <br><br>
+        <label for="rotSlider">RotateX:</label>
+        <input id="rotSlider" type="range" min="-100" max="100" oninput="onRotationInput()"></input>
+
+        <label for="rotSliderY">RotateY:</label>
+        <input id="rotSliderY" type="range" min="-100" max="100" oninput="onRotationInput()"></input>
+
+        <label for="rotSliderZ">RotateZ:</label>
+        <input id="rotSliderZ" type="range" min="-100" max="100" oninput="onRotationInput()"></input>
+
+        <br><br>
+        <label for="TransX">TranslateX:</label>
+        <input id="TransX" type="range" min="-100" max="100" oninput="TanslateIn()"></input>
+
+        <label for="TransY">TranslateY:</label>
+        <input id="TransY" type="range" min="-100" max="100" oninput="TanslateIn()"></input>
+
+        <label for="TransZ">TranslateZ:</label>
+        <input id="TransZ" type="range" min="-100" max="100" oninput="TanslateIn()"></input>
+
+        <br><br>
+        <label for="ScaleX">ScaleX:</label>
+        <input id="ScaleX" type="range" min="1" max="100" oninput="ScaleIn()"></input>
+
+        <label for="ScaleY">ScaleY:</label>
+        <input id="ScaleY" type="range" min="1" max="100" oninput="ScaleIn()"></input>
+
+        <label for="ScaleZ">ScaleY:</label>
+        <input id="ScaleZ" type="range" min="1" max="100" oninput="ScaleIn()"></input>
+
+    </body>
+</html>

@@ -1,0 +1,177 @@
+﻿<html>
+	<head>
+		<title>Ruiyang's website</title>
+		<link rel="shortcut icon" href="images/ico.jpg"/>
+		<link href="css/style.css?v=2" rel="stylesheet" type="text/css" media="all">
+		<link rel="stylesheet" href="css/animate.min.css">
+		<script src="js/wow.min.js"></script>
+		<script>
+		if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+			new WOW().init();
+		};
+		</script>
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<img src="images/head.jpg" class="xwcms" onmouseover="this.src='images/head.png'" onmouseout="this.src='images/head.jpg'"/>
+				<div class="logo-text">Ruiyang<span style="color:#FF6347;font-size:1.2em;">'S</span> Web</div>
+			</div>
+			<div class="right-block">
+				<div class="wow pulse bg-yellow" data-wow-delay="0.1s">As engineers,</div>
+				<div class="wow rollIn bg-red" data-wow-iteration="1" data-wow-duration="0.5s">we were going to be in a position to change the world</div>
+				<div class="wow bounceInRight bg-blue">– not just study it.</div>
+				<div class="wow bounceInRight bg-blue">---Henry Petroski</div>
+			</div>
+		</header>
+		<div class="clear">
+		</div>
+		<nav id="nav" class="nav-wrap">
+			<ul class="clearfix">
+				<li class="menuactive">
+					<a href="index.html">
+						Project
+					</a>
+				</li>
+			
+				<li>
+					<a href="project/resume.html">
+					   Resume
+					</a>
+				</li>
+			
+				<li>
+					<a href="extra_index.html">
+					   Extracurriculum
+					</a>
+				</li>
+				
+				
+			</ul>                 
+		</nav>
+	
+		
+		<section class="container-content">
+			<div class="article-list">
+
+
+				<div class="item">
+					<div class="art-img">
+						<img src="project/game/pic/o1.png" />
+					</div>
+					<div class="title">
+						<a href="project/game/features_asg5.html">Jumping Cylinder using Three.js</a>
+					</div>
+					<div class="base-info">
+						<ul>
+							<li>
+								<img src="images/head.png" class="xwcms2"/>
+							</li>
+							<li>
+								<a href="index.html">Ruiyang</a>
+							</li>
+							<li>
+								Issued time： 2021-06-10
+							</li>
+						</ul>
+					</div>
+					<div class="desc">
+						In this project, user can control the Cylinder and make it to jump from one platform to the next platform.
+					</div>
+				</div>
+
+
+				<div class="item">
+					<div class="art-img">
+						<img src="project/Cam_control/pic/operations.PNG" />
+					</div>
+					<div class="title">
+						<a href="project/Cam_control/features_asg4.html">Camera control in 3D scene</a>
+					</div>
+					<div class="base-info">
+						<ul>
+							<li>
+								<img src="images/head.png" class="xwcms2"/>
+							</li>
+							<li>
+								<a href="index.html">Ruiyang</a>
+							</li>
+							<li>
+								Issued time： 2021-06-01
+							</li>
+						</ul>
+					</div>
+					<div class="desc">
+						In the 3D simulation scene, you can modify the position of objects in the center,
+						change the camera position, and modify lighting components.
+					</div>
+				</div>
+				
+				<div class="item">
+					<div class="art-img">
+						<img src="project/Mesh/pic/o1.png" />
+					</div>
+					<div class="title">
+						<a href="project/Mesh/features.html">Draw a meallet in 3D scene</a>
+					</div>
+					<div class="base-info">
+						<ul>
+							<li>
+								<img src="images/head.png" class="xwcms2"/>
+							</li>
+							<li>
+								<a href="index.html">Ruiyang</a>
+							</li>
+							<li>
+								Issued time： 2021-05-15
+							</li>
+						</ul>
+					</div>
+					<div class="desc">
+						You can create two objects in the scene, and change each position respectively. 
+					</div>
+				</div>
+
+				
+			</div> 
+		</section>
+
+		<div class="clear">
+		</div>	
+		
+		<footer class="footer">
+			<div class="footer_content">
+				<h2>END</h2>
+			</div>
+		</footer>
+		
+
+		<script src="plugin/SuperSlide/js/jquery.min.js"></script>
+		<!-- <script src="js/jquery-1.12.4.min.js"></script> -->
+		<script src="plugin/SuperSlide/js/superslide.2.1.js"></script>
+		<script type="text/javascript">
+		jQuery(".youtiy_slider .bd li").first().before( jQuery(".youtiy_slider .bd li").last() );
+		jQuery(".youtiy_slider").hover(function(){
+			 jQuery(this).find(".arrow").stop(true,true).fadeIn(300) 
+			 },function(){ 
+				jQuery(this).find(".arrow").fadeOut(300) });				
+			 jQuery(".youtiy_slider").slide(
+				{ titCell:".hd ul", mainCell:".bd ul", effect:"leftLoop",autoPlay:true, vis:3,autoPage:true, trigger:"mouseover"}
+			);
+			
+			
+		$(document).ready(function(e) {	
+			var offset = 890;
+			$(window).on('scroll', function(){
+				if($(this).scrollTop() > offset ) {
+					$('.recommend').css('position','fixed');
+					$('.recommend').css('top','0px');
+				} 
+				else {
+					$('.recommend').css('position','');
+				}
+			});
+		});
+		</script>
+	</body>
+</html>

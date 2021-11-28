@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mallet lighting</title>
+    <!-- Load external libs -->
+</head>
+
+
+<body onload="main()">
+    <h1> Prog3: Lighting</h1>
+    <p> Ruiyang Liu, Rliu60@ucsc.edu</p>
+    <ul>
+      <li><a href="index.html">html code</a>: This is the file drawing the cylinder</li>
+      <li><a href="asg3.js">JS code</a>: This is the file containing all functions</li>
+    </ul>
+
+    <h2>Project Overview</h2>
+    <p>
+      In this programing assignment, I will create two cylenders in the 3D world. Then user can select different light sources and light effects.
+      User can switch between 1) wireframe, flat shading, smooth(Gouraud) shading 2) point light or/and directional light 3) turn on/off each lighting component
+      4) You can also moving point light source.
+    <h2>User Guide</h2>
+    <ul>
+      <li>The default is smooth shading. User can switch between three different shading options.</li>
+      <li>User can select light source. If  both are off, only the ambient light will be seen.</li>
+      <li>In default, both light sources are ON. Point light(orange sphere in the center)'s default position is at origin, user can change it by changing the slider. </li>
+      <li>You can also turn on/off each lighting effect. And change the specular light factor. </li>
+      <li>Notice: Please change the position of point light. So you can see how the point light works. </li>
+      <li>Notice: When you move point light along z-axis, it may seem like not moving, because viewer's direction is along z-axis. But the light moves.</li>
+      <li>Base code credit to Lucas:) </li>
+    </ul>
+
+    <h3>NOTICE: You can change the number of sides if you want to. But this operation is not available on the website directly. (I believe it's optional).
+      You can do this by change the value of "num_ver" on cube.js, line 19. The default value is 50.</h3>
+
+    <h2>Program approach/logic:</h2>
+    <ul>
+      <li>Flat shading: One normal per ploygon. </li>
+      <li>Smooth shading: One normal per vertex.</li>
+    </ul>
+
+    <h2>Example output</h2>
+    <h3>1)default output when you change nothing. You should be able to see this when website opened</h3>
+    <h3>The point light source locates at [0,0,0], you need to move it to see the lighting.</h3>
+    <img src="pic/o1.png" border=0>
+
+    <h3>Point light's position is changed. You can see both point lighting and directional lighting. </h3>
+    <img src="pic/o2.png" border=0>
+
+    <h3>wireframe and flat shading:  </h3>
+    <table><tr>
+    <td><img src="pic/o3.png" border=0></td>
+    <td><img src="pic/o4.png" border=0></td>
+    </tr></table>
+
+    <h3>Both light sources are ON, and Both light sources are OFF:  </h3>
+    <table><tr>
+    <td><img src="pic/o5.png" border=0></td>
+    <td><img src="pic/o6.png" border=0></td>
+    </tr></table>
+
+    <h3>Only directional light , and Only point light:  </h3>
+    <table><tr>
+    <td><img src="pic/o7.png" border=0></td>
+    <td><img src="pic/o8.png" border=0></td>
+    </tr></table>
+
+    <h3>Turn ON/OFF some lighting effect </h3>
+    <h3>Ambient light tuened off, and diffuse light turned off. </h3>
+    <table><tr>
+    <td><img src="pic/o10.png" border=0></td>
+    <td><img src="pic/o9.png" border=0></td>
+    </tr></table>
+
+</body>
+
+
+
+</html>
