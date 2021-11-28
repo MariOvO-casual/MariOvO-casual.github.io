@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Draw a mallet</title>
+    <!-- Load external libs -->
+</head>
+
+
+<body onload="main()">
+    <a href="../../index.html">
+      <span style="color:#474aff;font-size:2em;"> <-Back to main page</span>
+    </a>
+    <h1> Prog2: Draw a mallet's</h1>
+    <p> Ruiyang Liu, Rliu60@ucsc.edu</p>
+    <ul>
+      <li><a href="index.html"><span style="font-size:1.5em;"> Click me to the project</span></a>: This is the file drawing the cylinder</li>
+      <li><a href="asg2.js">JS code</a>: This is the file containing all functions</li>
+    </ul>
+
+    <h2>Project Overview</h2>
+    <div align="center"><img src="pic/overview.png" width = 500 height = 300></div>
+    <p>
+      In this programing assignment, I will create two cylenders in the 3D world. At default, the number of side is 50, and they are arranged like a mallet. There are also some user interface, you can play around with each cylinder.
+
+    <h2>User Guide</h2>
+    <ul>
+      <li>You will see a default mallet if you change nothing.</li>
+      <li>You can select each object and do the operation(translate, rotate or scale). Cube1 is the red one, cube2 is the blue one. </li>
+      <li>After you selected the object, you can do the following operations with corresponding sliders: translate, rotate and scale.</li>
+      <li>Each operation is supported at three axies. </li>
+      <li>Try to modify each slider, you can see from different angle for each object.  </li>
+      <li>Note1: This is the implementation of flat shading. Each face has one same color.  </li>
+      <li>Note2: Canvas color set as light gray, so you can see the object more clearly.  </li>
+      <li>Base code credit to Lucas:) </li>
+    </ul>
+
+    <h3>NOTICE: You can change the number of sides if you want to. But this operation is not available on the website directly. (I believe it's optional).
+      You can do this by change the value of "num_ver" on cube.js, line 9. The default value is 50.</h3>
+
+    <h2>Program approach/logic:</h2>
+    <ul>
+      <li>1.Calculate each vertex coordinates based on number of side. </li>
+      <li>2.Assign  vertex coordinates to corresponding vertics, indices and normal array.</li>
+      <li>3.Send the value to GPU</li>
+      <li>4.Read input from slider, and set translate/rotate/scale based on user's demand</li>
+    </ul>
+
+    <h2>Example output</h2>
+    <h3>1)default output when you change nothing. You should be able to see this when website opened</h3>
+    <h3>The light source locates at [1,1,1], which is the right-front-up corner.</h3>
+    <h3>So the bule cylinder's upper part is lighter and red one's right part is lighter.</h3>
+    <img src="pic/o1.png" border=0>
+
+    <h3>2)Some sliders are changed randomly, so you can see the cylinders from different angles. </h3>
+    <img src="pic/o2.png" border=0>
+
+    <h3>3)When the number of side changed to 4, they are cubes. In this picture, the position of cubes are modified from the default mallet.  </h3>
+    <h4>It's clear to see the flat shading, each face shares a same normal and color.</h4>
+    <img src="pic/o3.png" border=0>
+
+    <h3>4)When the number of side changed to 3. In this picture, the position of cubes are modified from the default mallet.  </h3>
+    <img src="pic/o4.png" border=0>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Camera control</title>
+    <!-- Load external libs -->
+</head>
+
+
+<body onload="main()">
+    <a href="../../index.html">
+              <span style="color:#474aff;font-size:2em;"> <-Back to main page</span>
+    </a>
+    <h1> Camera control</h1>
+    <p> Ruiyang Liu, Rliu60@ucsc.edu</p>
+    <ul>
+      <li><a href="index.html"><span style="font-size:1.5em;"> Click me to the project</span></a>: This is the main program</li>
+      <li><a href="lib/features.html">old_feature.html</a>: features for all functions inherited from previous project</li>
+      <li><a href="asg3.js">JS code</a>: This is the file containing all functions</li>
+    </ul>
+
+    <h2>Project Overview</h2>
+    <p>
+      In this programing assignment, I will create a camera based on the last assignment's model. User can
+      control the camera to see any angle of the object.
+    <h2>User Guide</h2>
+    <table><tr>
+    <td><img src="pic/operations.png" width = 400 height = 400 border=0></td>
+    <td><img src="pic/step.png" width = 400 height = 400 border=0></td>
+    </tr></table>
+
+    <ul>
+      <h3>Part 1: Camera control(available keyboard operations)</h3>
+      <li>The default is playing the camera animation, you can uncheck the animation box to stop it.</li>
+      <li>Press corresponding key on keyboard for each operation:</li>
+      <li>&nbsp&nbsp&nbsp&nbsp"w": move forward    &nbsp&nbsp "s": move backward</li>
+      <li>&nbsp&nbsp&nbsp&nbsp"a": move leftward   &nbsp&nbsp "d": move rightward </li>
+      <li>&nbsp&nbsp&nbsp&nbsp"q": pan left &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp  &nbsp "e": pan right </li>
+      <li>&nbsp&nbsp&nbsp&nbsp"c": tilt up  &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp "z": tilt down </li>
+      <li>&nbsp&nbsp&nbsp&nbsp"o": switch to orthographic &nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp  &nbsp "p": switch to perspective </li>
+      <p>
+      <h3>Part 2: Camera movement route</h3>
+      <li>For example, the right picture above. You wants to move the camera from original position to the
+          object's front-up posistion. You need tilt the camera up, then move forward. When the camera arrive
+          the posistion, tilt the camera down.</li>
+      <p>
+      <h3>Part 3: Camera zoom and Animation</h3>
+      <li>Using the "Animation" checkbox to perform or stop animation. Default is Animation ON.</li>
+      <li>Animation route is a cubic curve that camera revolves around the object along y-axis.</li>
+      <li>Using "zoom out" slider to control the zoom. </li>
+
+      <h3>Part 4: Lighting inherited from assignment 3</h3>
+      <li>The default has two light sources, one point light one directional light.</li>
+      <li>If the point light is too far away from object, the specular light may be vague and small. Try to decrease the
+          specular light factor. Smaller number of that value, brighter the light is.  </li>
+      <li>For the specific lighting instructions, check the old_feature link above. But I think the light operation interface is clear :)</li>
+      <li>Base code credit to Lucas:) </li>
+    </ul>
+
+    <h5>NOTICE: You can switch camera type (orthographic/perspective) with keyboard. Fahim said we don't need to
+        implement operations to modify orthographic camera(near/far/bound). Though, you can change near/far point of orthographic camera
+        in camera.js</h5>
+
+
+    <h2>Example output</h2>
+    <h3>1)Animation stopped, and moved the camera away and left to the object. </h3>
+    <h3>Operation Sequence: A -> S (press multiply times)</h3>
+    <img src="pic/RB.png" border=0>
+
+    <h3>2)Animation stopped, and moved the camera to the object's front-below. </h3>
+    <h3>Operation Sequence: Z -> W -> C (press multiply times)</h3>
+    <img src="pic/below.png" border=0>
+
+    <h3>3)Animation stopped, orthographic camera. </h3>
+    <h3>Operation Sequence: O (press one time)</h3>
+    <img src="pic/orth.png" border=0>
+
+    <h3>4)Animation stopped, zoomed out. </h3>
+    <img src="pic/zoomout.png" border=0>
+
+</body>
+
+
+
+</html>
